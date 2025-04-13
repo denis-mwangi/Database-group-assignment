@@ -132,7 +132,15 @@ CREATE TABLE addressStatus(
 statusId INT PRIMARY KEY AUTO_INCREMENT, 
 statusDescription VARCHAR(20) );
 
+CREATE USER 'bookstore_admin'@'localhost' IDENTIFIED BY '1234';
 
+GRANT ALL PRIVILEGES ON bookstoreDB.* TO 'bookstore_admin'@'localhost';
+
+CREATE USER 'Nerdella'@'localhost' IDENTIFIED BY 'Ella123';
+GRANT SELECT ON BookstoreDB.* TO 'Nerdella'@'localhost';
+
+ CREATE USER 'Denoe'@'localhost' IDENTIFIED BY 'de432';
+GRANT SELECT ON bookstoreDB.* TO 'Denoe'@'localhost';
 
 
 
